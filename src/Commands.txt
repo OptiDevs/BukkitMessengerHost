@@ -1,0 +1,60 @@
+Commands:
+	!GETSERVERUUID <server>
+	!GOTSERVERUUID <server from GETSERVERUUID> <serverUUID>
+	!FINDPLAYER <player> [args]
+		Find player and other info about it
+		player:
+			Can be players Username or UUID, NOT display name!
+		args: (Seperated by a space)
+			health
+				float
+				Asks for players health from 0.0 to 20.0 (can be more than 20.0)
+			hunger
+				float
+				Asks for players food level from 0.0 to 20.0 (can be more than 20.0)
+			location
+				String
+				Asks for players location in X Y Z format
+			gamemode
+				String
+				Asks for players gamemode
+			ip
+				String
+				Asks for players IP
+	!GOTPLAYER <playerUN> <playerUUID> <serverName> <serverIP> [args]
+		When/If !FINDPLAYER is called and a server has found that player than that server will send this command
+		playerUN:
+			Players username, NOT display name!
+		playerUN:
+			Players UUID
+		args: (Seperated by a space)
+			health:<playerHealth>
+				float
+				Returns players health from 0.0 to 20.0 (can be more than 20.0)
+			hunger:<playerHunger>
+				float
+				Returns players food level from 0.0 to 20.0 (can be more than 20.0)
+			location:<X>:<Y>:<Z>:[YAW]:[PITCH]
+				String
+				Returns players location in X Y Z format
+			gamemode:<gamemode>
+				String
+				Returns players gamemode
+			ip:<Ip>
+				String
+				Returns players IP
+	!FINDSERVER <serverUUID> [args]
+		Find a server and other info about it
+		server:
+			Can be server name or letter/number ip
+		args:
+			playerCount:
+				int
+				Asks for server player count
+			playersMax
+				int
+				Asks for max ammount of players
+			
+	!GOTSERVER <serverName> <serverIP> [args]
+	!SERVERMSG <to> <from> <message>
+	!PLAYERMSG <to> <from> <message>
